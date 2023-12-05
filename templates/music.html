@@ -189,6 +189,8 @@
         </div>
       </div>
 
+      <!-- ... (기존 코드) ... -->
+
       <div class="row row-cols-1 row-cols-md-4 g-4 mx-auto w-75 pb-5">
         {% for song in data %}
         <div class="col">
@@ -198,7 +200,7 @@
               <h5 class="card-title">{{song.title}}</h5>
               <p class="card-text">{{song.artist}}</p>
               <p class="card-text">추천 by {{song.username}}</p>
-
+              <!-- 삭제 버튼 추가 -->
               <form
                 action="{{ url_for('delete_song', id=song.id) }}"
                 method="post"
@@ -210,6 +212,8 @@
         </div>
         {% endfor %}
       </div>
+
+      <!-- ... (기존 코드) ... -->
     </div>
 
     <div class="container">
